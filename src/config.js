@@ -1,5 +1,5 @@
 
-const API_BASE_URL = "https://server1-0i20.onrender.com";
+const API_BASE_URL = "https://server-kappa-orpin-92.vercel.app";
 
 
 export default API_BASE_URL;
