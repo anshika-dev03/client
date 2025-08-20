@@ -7,7 +7,7 @@ import StackTitle from "../../components/Dashboard/StackTitle/StackTitle";
 import AddTask from "../../components/Dashboard/Add Task/AddTask";
 import axios from "axios";
 import EditTask from "../../components/Dashboard/EditTask/EditTask";
-import API_BASE_URL from './config';
+import API_BASE_URL from '@/config';
 const Dashboard = () => {
   const [AddTaskDiv, setAddTaskDiv] = useState("hidden");
   const [editTaskDiv, setEditTaskDiv] = useState("hidden");

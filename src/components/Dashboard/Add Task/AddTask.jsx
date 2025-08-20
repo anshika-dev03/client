@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import EditTask from "../EditTask/EditTask";
-import API_BASE_URL from './config';
+import API_BASE_URL from '@/config';
 const AddTask = ({ setAddTaskDiv }) => {
   const [Values, setValues] = useState({
     title: "",

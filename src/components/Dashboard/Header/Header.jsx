@@ -1,8 +1,9 @@
 import React from "react";
-import API_BASE_URL from './config';
+
 import { IoLogOutOutline } from "react-icons/io5";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from '@/config';
 const Header = ({ setAddTaskDiv }) => {
   const navigate = useNavigate();
   const logout = async () => {
