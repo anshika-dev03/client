@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import API_BASE_URL from './config';
 const EditTask = ({ setEditTaskDiv, EditTaskId }) => {
   const [Values, setValues] = useState({
     title: "",
@@ -16,7 +16,7 @@ const EditTask = ({ setEditTaskDiv, EditTaskId }) => {
     const fetch = async () => {
       try {
         const task = await axios.get(
-          `http://localhost:1000/api/v1/getTask/${EditTaskId}`,
+          `${API_BASE_URL}/api/v1/getTask/${EditTaskId}`,
           { withCredentials: true }
         );
         setValues(task.data.taskDetails);
@@ -31,7 +31,7 @@ const EditTask = ({ setEditTaskDiv, EditTaskId }) => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://localhost:1000/api/v1/editTask/${id}`,
+        `${API_BASE_URL}/api/v1/editTask/${id}`,
         Values,
         {
           withCredentials: true,
@@ -49,7 +49,7 @@ const EditTask = ({ setEditTaskDiv, EditTaskId }) => {
     e.preventDefault();
     try {
       const res = await axios.delete(
-        `http://localhost:1000/api/v1/deleteTask/${id}`,
+        `${API_BASE_URL}/api/v1/deleteTask/${id}`,
         {
           withCredentials: true,
         }
